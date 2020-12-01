@@ -1,0 +1,30 @@
+body {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr 0.3fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "hero hero nav"
+    "project project project"
+    "footer footer footer";
+}
+
+header {
+  align-self: flex-start;
+  grid-area: hero;
+}
+
+nav {
+  align-self: center;
+  grid-area: nav;
+}
+
+section {
+  align-self: center;
+  grid-area: project;
+}
+
+footer {
+  align-self: center;
+  grid-area: footer;
+}
