@@ -9,20 +9,31 @@ html {
   background-color: #18191a;
 }
 
-body {
-  height: 100hv;
+header {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  text-align: center;
+}
+
+h1 {
+  position: relative;
+  padding: 1rem 0;
+  flex: 1;
 }
 
 section {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
-  background-color: red;
+  align-items: center;
+  align-content: space-evenly;
 }
 
 div {
-  height: 200px;
-  width: 200px;
+  margin: 1rem;
+  height: 350px;
+  width: 350px;
   background: no-repeat center/cover
     url("https://images.unsplash.com/photo-1517178271410-0b2a6480952f");
 }
