@@ -14,15 +14,15 @@ body {
 }
 
 section {
-  display: fex;
+  display: flex;
   flex-flow: row wrap;
-  margin: 2rem auto;
+  justify-content: space-evenly;
+  background-color: red;
 }
 
 div {
   height: 200px;
-  width: 30%;
-  margin: cal(10%/6);
+  width: 200px;
   background: no-repeat center/cover
     url("https://images.unsplash.com/photo-1517178271410-0b2a6480952f");
 }
