@@ -1,0 +1,28 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  color: white;
+  font-size: 16px;
+  background-color: #18191a;
+}
+
+body {
+  height: 100hv;
+}
+
+section {
+  display: fex;
+  flex-flow: row wrap;
+  margin: 2rem auto;
+}
+
+div {
+  height: 200px;
+  width: 30%;
+  margin: cal(10%/6);
+  background: no-repeat center/cover
+    url("https://images.unsplash.com/photo-1517178271410-0b2a6480952f");
+}
