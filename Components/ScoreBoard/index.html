@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js"></script>
+    <title>PP Scoreboard</title>
+  </head>
+  <body>
+    <section>
+      <div class="image"></div>
+      <h2 class="header">Ping Pong Score Keeper</h2>
+      <div class="score-section">
+        <h1 class="score"><span id="player-1-score">0</span> to <span id="player-2-score"></span></h1>
+        <p class="score-lead">Use the buttons below to score</p>
+        <div class="win-tally">
+          <label class="win" for="win">Playing To</label>
+          <select id="win" name="win">
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+      </div>
+      <div class="button-group">
+        <button class="player-1">1+ Player One</button>
+        <button class="player-2">1+ Player Two</button>
+        <button class="reset">Reset</button>
+      </div>
+    </section>
+  </body>
+</html>
