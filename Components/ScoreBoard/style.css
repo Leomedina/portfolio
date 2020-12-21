@@ -83,3 +83,7 @@ button:last-child {
 button:hover {
   cursor: pointer;
 }
+
+button:disabled {
+  background-color: grey;
+}
