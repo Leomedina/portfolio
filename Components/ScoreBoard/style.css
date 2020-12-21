@@ -37,6 +37,7 @@ section {
   font-size: 3rem;
   padding-bottom: 0.3rem;
   font-variant-numeric: tabular-nums;
+  transition: all 0.5s ease-in;
 }
 
 .score-lead {
@@ -63,6 +64,7 @@ button {
   font-weight: 600;
   text-transform: uppercase;
   border: none;
+  transition: all 0.5s ease-in;
 }
 
 button:last-child {

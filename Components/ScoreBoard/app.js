@@ -1,63 +1,63 @@
-let playerOneScore = document.querySelector("#player-1-score");
-let playerTwoScore = document.querySelector("#player-2-score");
-let playerOneButton = document.querySelector(".player-1");
-let playerTwoButton = document.querySelector(".player-2");
-let resetButton = document.querySelector(".reset");
-let win = document.querySelector("#win");
+let win = parseInt(document.querySelector("#win").value);
+const winSelector = document.querySelector("#win");
+const resetButton = document.querySelector(".reset");
 
-if (playerOneScore === win || playerTwoScore === win) {
-  console.log("you win!");
+const playerOne = {
+  score: 0,
+  button: document.querySelector(".player-1"),
+  display: document.querySelector("#player-1-score")
+};
+
+const playerTwo = {
+  score: 0,
+  button: document.querySelector(".player-2"),
+  display: document.querySelector("#player-2-score")
 };
 
 function score(evt) {
   let player = evt.target.value;
 
-  if (player === "1") updateScore(playerOneScore);
-  else updateScore(playerTwoScore);
+  if (player === "1") {
+    playerOne.score++;
+    playerOne.display.textContent = playerOne.score;
+  } else {
+    playerTwo.score++;
+    playerTwo.display.textContent = playerTwo.score;
+  };
 
   checkWin();
 };
 
-function updateScore(player) {
-  let score = parseInt(player.innerText);
-  score += 1;
-  player.innerText = score;
-};
-
 function resetScore() {
-  playerOneScore.innerText = 0;
-  playerTwoScore.innerText = 0;
-  playerOneButton.removeAttribute("disabled");
-  playerTwoButton.removeAttribute("disabled");
-  playerOneScore.style.color = "black"
-  playerTwoScore.style.color = "black"
+  for (let player of [playerOne, playerTwo]) {
+    player.score = 0;
+    player.display.textContent = 0;
+    player.button.removeAttribute("disabled");
+    player.display.style.color = "black"
+  };
 };
 
 function checkWin() {
-  let winVal = parseInt(win.value);
-  let playerOne = parseInt(playerOneScore.innerText);
-  let playerTwo = parseInt(playerTwoScore.innerText);
-
-  if (playerOne === winVal || playerTwo === winVal) {
-    playerOneButton.setAttribute("disabled", true);
-    playerTwoButton.setAttribute("disabled", true);
-    if (playerOne === winVal) {
-      playerOneScore.style.color = "green"
-      playerTwoScore.style.color = "red"
+  if (playerOne.score === win || playerTwo.score === win) {
+    playerOne.button.setAttribute("disabled", true);
+    playerTwo.button.setAttribute("disabled", true);
+    if (playerOne.score === win) {
+      playerOne.display.style.color = "green"
+      playerTwo.display.style.color = "red"
     } else {
-      playerOneScore.style.color = "red"
-      playerTwoScore.style.color = "green"
+      playerOne.display.style.color = "red"
+      playerTwo.display.style.color = "green"
 
-    }
+    };
   };
 };
 
 function updateWin(event) {
-  win = event.target;
+  win = parseInt(event.target.value);
   resetScore();
 }
 
-win.addEventListener("change", updateWin)
-playerOneButton.addEventListener("click", score);
-playerTwoButton.addEventListener("click", score);
+winSelector.addEventListener("change", updateWin)
+playerOne.button.addEventListener("click", score);
+playerTwo.button.addEventListener("click", score);
 resetButton.addEventListener("click", resetScore);
