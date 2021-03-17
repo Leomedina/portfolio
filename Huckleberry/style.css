@@ -7,7 +7,6 @@ html,
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
 }
 
 html {
@@ -48,12 +47,12 @@ header strong {
 p {
   padding: 16px 0;
   font-size: 1.25rem;
+  line-height: 1.4;
 }
 
 main {
   background-color: hsl(0deg, 0%, 60%);
-  padding-top: 64px;
-  min-height: 65%;
+  padding: 96px 0;
 }
 
 .card {
