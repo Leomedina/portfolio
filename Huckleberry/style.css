@@ -48,7 +48,7 @@ p {
 main {
   background-color: hsl(0deg, 0%, 60%);
   padding-top: 64px;
-  min-height: max-content;
+  min-height: 65%;
 }
 
 .card {
