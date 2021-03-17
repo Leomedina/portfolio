@@ -10,6 +10,10 @@ body {
   height: 100%;
 }
 
+html {
+  font-size: 18px;
+}
+
 h1,
 h2,
 p {
@@ -20,8 +24,7 @@ p {
 /* Add styles here! */
 .max-width-wrapper {
   max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 header {
@@ -29,6 +32,7 @@ header {
 }
 
 .intro-chunk {
+  max-width: 500px;
   padding: 128px 48px 48px;
 }
 
@@ -37,28 +41,26 @@ header strong {
 }
 
 .title {
+  font-size: 2rem;
   padding-bottom: 32px;
 }
 
 p {
   padding: 16px 0;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 main {
   background-color: hsl(0deg, 0%, 60%);
   padding-top: 64px;
   min-height: 65%;
+  margin-left: -8px;
 }
 
 .card {
   background-color: hsl(0deg, 0%, 100%);
   padding: 8px 48px;
   border-bottom: 8px solid hsl(0deg, 0%, 30%);
-}
-
-.card p {
-  font-size: 1.25rem;
 }
 
 .indented-heading {
@@ -73,9 +75,5 @@ main {
   .indented-heading {
     padding: 16px 64px;
     margin-left: -64px;
-  }
-
-  .intro-chunk {
-    max-width: 65%;
   }
 }
