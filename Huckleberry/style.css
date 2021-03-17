@@ -36,7 +36,7 @@ header strong {
   color: hsl(160deg, 100%, 30%);
 }
 
-header h1 {
+.title {
   padding-bottom: 32px;
 }
 
@@ -61,7 +61,7 @@ main {
   font-size: 1.25rem;
 }
 
-.card > h2 {
+.indented-heading {
   background-color: hsl(45deg, 100%, 50%);
   border-bottom: 8px solid hsl(45deg, 100%, 40%);
   padding: 16px 48px;
@@ -70,8 +70,12 @@ main {
 }
 
 @media (min-device-width: 1024px) {
-  .card > h2 {
+  .indented-heading {
     padding: 16px 64px;
     margin-left: -64px;
+  }
+
+  .intro-chunk {
+    max-width: 65%;
   }
 }
