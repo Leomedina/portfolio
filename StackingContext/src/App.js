@@ -9,23 +9,26 @@ import HelpButton from "./HelpButton";
 
 export default function App() {
   return (
-    <Wrapper>
-      <HeaderWrapper>
-        <Header />
-      </HeaderWrapper>
-      <PageContent />
-      <GlobalStyles />
+    <>
+      <Wrapper>
+        <HeaderWrapper>
+          <Header />
+        </HeaderWrapper>
+        <PageContent />
+      </Wrapper>
       <HelpButton />
-    </Wrapper>
+      <GlobalStyles />
+    </>
   );
 }
 
 const Wrapper = styled.div`
   min-height: 150vh;
+  isolation: isolate;
 `;
 
 const HeaderWrapper = styled.div`
   position: sticky;
-  z-index: 2;
+  z-index: 1;
   top: 0;
 `;
