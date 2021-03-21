@@ -4,6 +4,8 @@
 }
 
 .maxWidthWrapper {
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
 .header {
@@ -24,7 +26,9 @@
 }
 
 .characterWrapper {
+  max-width: 65%;
 }
 
 .controlColumn {
+  max-width: 50%;
 }
