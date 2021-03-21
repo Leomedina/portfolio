@@ -1,0 +1,7 @@
+.backgroundBar {
+    background-color: hsl(195deg, 20%, 86%);
+    position: fixed;
+    bottom: 0;
+    height: 50%;
+    width: 100%;
+}
