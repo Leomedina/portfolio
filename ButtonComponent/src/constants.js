@@ -38,6 +38,7 @@ export const VARIANTS = {
     base: {
       "--baseBgColor": COLORS.primary,
       "--baseBorder": `2px solid ${COLORS.primary}`,
+      "--baseColor": COLORS.white,
     },
     focus: {
       "--focusBgColor": COLORS.primary,
@@ -46,13 +47,15 @@ export const VARIANTS = {
     },
     hover: {
       "--hoverBgColor": COLORS.primaryLight,
-      "--hoverBorder": `2px solid ${COLORS.primary}`,
+      "--hoverBorder": `2px solid ${COLORS.primaryLight}`,
+      "--hoverColor": COLORS.white,
     },
   },
   outline: {
     base: {
       "--baseBgColor": COLORS.white,
       "--baseBorder": `2px solid ${COLORS.primary}`,
+      "--baseColor": COLORS.primary,
     },
     focus: {
       "--focusBgColor": COLORS.white,
@@ -62,21 +65,24 @@ export const VARIANTS = {
     hover: {
       "--hoverBgColor": COLORS.offwhite,
       "--hoverBorder": `2px solid ${COLORS.primary}`,
+      "--hoverColor": COLORS.primary,
     }
   },
   ghost: {
     base: {
-      "--baseBgColor": 'transparent',
-      "--baseBorder": 'none',
+      "--baseBgColor": "transparent",
+      "--baseBorder": "none",
+      "--baseColor": COLORS.gray,
     },
     focus: {
       "--focusBgColor": COLORS.white,
-      "--focusBorder": `2px solid ${COLORS.primary}`,
-      "--focusOutline": `2px solid red`,
+      "--focusBorder": `2px solid ${COLORS.transparentGray75}`,
+      "--focusOutline": "none",
     },
     hover: {
-      "--hoverBgColor": COLORS.offwhite,
-      "--hoverBorder": `2px solid ${COLORS.primary}`,
+      "--hoverBgColor": COLORS.transparentGray15,
+      "--hoverBorder": "none",
+      "--hoverColor": COLORS.black,
     }
   }
 };

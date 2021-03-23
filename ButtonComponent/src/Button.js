@@ -18,7 +18,6 @@ const Button = ({ variant, size, children }) => {
 const Base = styled.button`
   background-position: center;
   border-radius: 4px;
-  color: white;
   display: block;
   padding: var(--paddingY) var(--paddingX);
   height: var(--height);
@@ -27,23 +26,29 @@ const Base = styled.button`
   font-weight: 500;
   text-align: center;
   width: var(--width);
-
+  
   & span {
     display: block;
   }
-`;
+  `;
 
 //This styles the button variants
 const Wrapper = styled(Base)`
   background-color: var(--baseBgColor);
   border: var(--baseBorder);
+  color: var(--baseColor);
 
   &:focus {
-    background-color: green;
+    background-color: var(--focusBgColor);
+    border: var(--focusBorder);
+    outline: var(--focusOutline);
+    color: var(--focusColor);
   }
 
   &:hover {
-    background-color: var(--focusBgColoÎ);
+    background-color: var(--hoverBgColor);
+    border: var(--hoverBorder);
+    color: var(--hoverColor)
   }
 `;
 
