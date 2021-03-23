@@ -20,6 +20,7 @@ const Base = styled.button`
   border-radius: 4px;
   display: block;
   padding: var(--paddingY) var(--paddingX);
+  padding-top: var(--paddingTop);
   height: var(--height);
   font-family: "Roboto";
   font-size: var(--fontSize);
@@ -41,8 +42,7 @@ const Wrapper = styled(Base)`
   &:focus {
     background-color: var(--focusBgColor);
     border: var(--focusBorder);
-    outline: var(--focusOutline);
-    color: var(--focusColor);
+    box-shadow: var(--focusBoxShadow);
   }
 
   &:hover {

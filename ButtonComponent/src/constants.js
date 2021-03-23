@@ -15,6 +15,7 @@ export const SIZES = {
     "--height": 35 + "px",
     "--paddingY": 8 + "px",
     "--paddingX": 16 + "px",
+    "--paddingTop": 4 + "px", // visual adjustments 
     "--fontSize": 16 + "px",
   },
   medium: {
@@ -22,6 +23,7 @@ export const SIZES = {
     "--height": 53 + "px",
     "--paddingY": 16 + "px",
     "--paddingX": 24 + "px",
+    "--paddingTop": 12 + "px", // visual adjustments
     "--fontSize": 21 + "px",
   },
   large: {
@@ -29,6 +31,7 @@ export const SIZES = {
     "--height": 65 + "px",
     "--paddingY": 20 + "px",
     "--paddingX": 36 + "px",
+    "--paddingTop": 16 + "px", // visual adjustments
     "--fontSize": 25 + "px",
   },
 };
@@ -43,7 +46,7 @@ export const VARIANTS = {
     focus: {
       "--focusBgColor": COLORS.primary,
       "--focusBorder": `2px solid ${COLORS.primary}`,
-      "--focusOutline": `2px solid red`,
+      "--focusBoxShadow": `0 0 0 2px ${COLORS.primary}`, 
     },
     hover: {
       "--hoverBgColor": COLORS.primaryLight,
@@ -60,7 +63,7 @@ export const VARIANTS = {
     focus: {
       "--focusBgColor": COLORS.white,
       "--focusBorder": `2px solid ${COLORS.primary}`,
-      "--focusOutline": `2px solid red`,
+      "--focusBoxShadow": `0 0 0 2px ${COLORS.primary}`,
     },
     hover: {
       "--hoverBgColor": COLORS.offwhite,
@@ -78,11 +81,13 @@ export const VARIANTS = {
       "--focusBgColor": COLORS.white,
       "--focusBorder": `2px solid ${COLORS.transparentGray75}`,
       "--focusOutline": "none",
+      "--focusOutlineOffSet": 0,
     },
     hover: {
       "--hoverBgColor": COLORS.transparentGray15,
-      "--hoverBorder": "none",
+      "--hoverBorder": `2px solid ${COLORS.transparentGray75}`,
       "--hoverColor": COLORS.black,
+      "--focusBoxShadow": "0",
     }
   }
 };
