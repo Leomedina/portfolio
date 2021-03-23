@@ -1,10 +1,50 @@
 import React from "react";
 import styled from "styled-components";
 
-import { COLORS } from "./constants";
+import { VARIANTS, SIZES } from "./constants";
 
 const Button = ({ variant, size, children }) => {
-  return "TODO";
+  const sizeVariant = SIZES[size];
+  const { base, focus, hover } = VARIANTS[variant];
+
+  return (
+    <Wrapper style={{ ...base, ...focus, ...hover, ...sizeVariant }}>
+      <span>{children}</span>
+    </Wrapper>
+  );
 };
+
+//This styles the button base (including dynamic sizing)
+const Base = styled.button`
+  background-position: center;
+  border-radius: 4px;
+  color: white;
+  display: block;
+  padding: var(--paddingY) var(--paddingX);
+  height: var(--height);
+  font-family: "Roboto";
+  font-size: var(--fontSize);
+  font-weight: 500;
+  text-align: center;
+  width: var(--width);
+
+  & span {
+    display: block;
+  }
+`;
+
+//This styles the button variants
+const Wrapper = styled(Base)`
+  background-color: var(--baseBgColor);
+  border: var(--baseBorder);
+
+  &:focus {
+    background-color: green;
+  }
+
+  &:hover {
+    background-color: var(--focusBgColoÎ);
+  }
+`;
 
 export default Button;
