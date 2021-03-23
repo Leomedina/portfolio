@@ -22,7 +22,7 @@ const Base = styled.button`
   padding: var(--paddingY) var(--paddingX);
   padding-top: var(--paddingTop);
   height: var(--height);
-  font-family: "Roboto";
+  font-family: 'Roboto', sans-serif;
   font-size: var(--fontSize);
   font-weight: 500;
   text-align: center;
