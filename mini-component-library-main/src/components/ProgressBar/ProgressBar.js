@@ -33,6 +33,8 @@ const VARIANTS = {
 };
 
 const ProgressBar = ({ value, size }) => {
+  const statusBarRadius = value > 90 ? 8 : 0;
+
   return (
     <ProgressBarWrapper
       style={VARIANTS[size]}
@@ -47,6 +49,7 @@ const ProgressBar = ({ value, size }) => {
           ...VARIANTS[size],
           "--width": `${value}%`,
           "--primary": `${COLORS.primary}`,
+          "--rightRadius": `${statusBarRadius}px`,
         }}
       />
     </ProgressBarWrapper>
@@ -67,6 +70,8 @@ const StatusBar = styled.div`
   border-radius: var(--borderRadius);
   width: var(--width);
   height: 100%;
+  border-top-right-radius: var(--rightRadius);
+  border-bottom-right-radius: var(--rightRadius);
 `;
 
 export default ProgressBar;
