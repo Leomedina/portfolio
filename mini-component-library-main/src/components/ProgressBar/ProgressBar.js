@@ -9,7 +9,7 @@ const VARIANTS = {
   large: {
     "--width": 370 + "px",
     "--height": 24 + "px",
-    "--borderRadius": 8 + "px",
+    "--borderRadius": 12 + "px",
     "--backgroundColor": `${COLORS.transparentGray15}`,
     "--boxShadow": `inset 0px 2px 4px ${COLORS.transparentGray35}`,
     "--padding": 4 + "px",
@@ -17,7 +17,7 @@ const VARIANTS = {
   medium: {
     "--width": 370 + "px",
     "--height": 12 + "px",
-    "--borderRadius": 8 + "px",
+    "--borderRadius": 4 + "px",
     "--backgroundColor": `${COLORS.transparentGray15}`,
     "--boxShadow": `inset 0px 2px 4px ${COLORS.transparentGray35}`,
     "--padding": 0,
@@ -25,7 +25,7 @@ const VARIANTS = {
   small: {
     "--width": 370 + "px",
     "--height": 8 + "px",
-    "--borderRadius": 8 + "px",
+    "--borderRadius": 4 + "px",
     "--backgroundColor": `${COLORS.transparentGray15}`,
     "--boxShadow": `inset 0px 2px 4px ${COLORS.transparentGray35}`,
     "--padding": 0,
@@ -33,8 +33,6 @@ const VARIANTS = {
 };
 
 const ProgressBar = ({ value, size }) => {
-  const statusBarRadius = value > 90 ? 8 : 0;
-
   return (
     <ProgressBarWrapper
       style={VARIANTS[size]}
@@ -49,7 +47,6 @@ const ProgressBar = ({ value, size }) => {
           ...VARIANTS[size],
           "--width": `${value}%`,
           "--primary": `${COLORS.primary}`,
-          "--rightRadius": `${statusBarRadius}px`,
         }}
       />
     </ProgressBarWrapper>
@@ -67,11 +64,10 @@ const ProgressBarWrapper = styled.div`
 
 const StatusBar = styled.div`
   background-color: var(--primary);
-  border-radius: var(--borderRadius);
+  border-radius: var(--borderRadius) 0  0 var(--borderRadius);
   width: var(--width);
   height: 100%;
-  border-top-right-radius: var(--rightRadius);
-  border-bottom-right-radius: var(--rightRadius);
+  overflow: hidden;
 `;
 
 export default ProgressBar;

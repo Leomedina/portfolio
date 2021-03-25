@@ -48,7 +48,7 @@ const Wrapper = styled(Base)`
   &:hover {
     background-color: var(--hoverBgColor);
     border: var(--hoverBorder);
-    color: var(--hoverColor)
+    color: var(--hoverColor);
   }
 `;
 
